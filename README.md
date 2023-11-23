@@ -12,3 +12,4 @@ This will be simple project of store which use firebase as backend and reactjs a
 ### Tech stack
 1. ReactJS
 2. Firebase
+3. TypeScript
