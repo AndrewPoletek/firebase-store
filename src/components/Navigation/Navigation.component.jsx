@@ -1,4 +1,5 @@
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import {Link} from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
 
@@ -8,7 +9,7 @@ const Navigation = () =>{
     return(
         <Header style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{"color":"white"}} >
-                FIREBASE STORE
+                <Link to={"/"}>FIREBASE STORE</Link>
             </div>
             <Menu
                 theme="dark"
@@ -18,25 +19,18 @@ const Navigation = () =>{
                     [
                         {
                             key: 1,
-                            label:"Home"
+                            label:<Link to={"/"}>Home</Link>
                         },
                         {
                             key: 2,
-                            label:"Categories"
+                            label:<Link to={"/categories"}>Categories</Link>
                         },
                         {
                             key: 3,
-                            label:"Sign In"
+                            label:<Link to={"/auth"}>Sign In</Link>
                         },
                     ]
                 }
-                // items={new Array(15).fill(null).map((_, index) => {
-                //     const key = index + 1;
-                //     return {
-                //         key,
-                //         label: `nav ${key}`,
-                //     };
-                // })}
             />
         </Header>
     )

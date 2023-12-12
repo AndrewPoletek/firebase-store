@@ -1,9 +1,10 @@
 import Navigation from "../../components/Navigation/Navigation.component";
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import {Outlet} from 'react-router'
 
 const { Header, Content, Footer } = Layout;
 
-const Home = () =>{
+const MainLayout = () =>{
     return (
         <Layout className="layout">
             <Navigation />
@@ -14,7 +15,7 @@ const Home = () =>{
                     <Breadcrumb.Item>App</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="site-layout-content" style={{ background: "white" }}>
-                    Content
+                    <Outlet />
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
@@ -22,4 +23,4 @@ const Home = () =>{
     )
 }
 
-export default Home
+export default MainLayout
